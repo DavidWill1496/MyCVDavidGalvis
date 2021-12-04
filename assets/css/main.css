@@ -1,0 +1,155 @@
+/*Class selectors begin with point,HTML tags without point*/
+html{
+  font-family: 'Nunito', sans-serif;
+}
+
+a{ /*Remove underline of links cause default is underline for links*/
+  text-decoration: none;
+  color: #8360c3;
+}
+
+img{
+  max-width: 100%; /*Setting a maximum of 100% of the screen for every image*/
+}
+
+a:hover{ /* Pseudoclass when mouse is over the elements a*/
+  opacity: 0.6; /*Changes the opacity of the elements from 0 to 1*/
+}
+
+.title{ /*Set the title in uppercase*/
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.container{
+  background: #8360c3;  /* fallback for old browsers KYE MEH*/
+  background: -webkit-linear-gradient(to right, #2ebf91, #8360c3);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2ebf91, #8360c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100vh; /*It's the 100% of the whole screen, independent of the father*/
+  display: flex; /*Nodes take position using flexbox*/
+  align-items: center; /*Puts the element in the center vert-horzntl*/
+  justify-content: center; /*Puts the element in the center vert-horzntl*/
+}
+.content{
+  max-width: 960px; /*Max dimentions of our content*/
+  /* max-height: 450px; Commented to make it responsive*/
+  width: 100%;  /*Stretching without losing the limits in pixels*/
+  height: 80vh; /* 80% of the whole screen*/
+  background-color: white;
+  /*Box shadow: difhorizontal difvertical desenfoque amplitud color*/
+  box-shadow: 0 3px 6px #000;
+  border-radius: 4px; /*Rounded corner for content (white rectangle)*/
+  position: relative; /*Positioned element*/
+  overflow: scroll; How the element behaves when the screen get short */
+}
+
+/* Designed for mobile*/
+.content{
+  padding: 1em; /* padding are margins for the content isnside*/
+}
+td{
+  display:block; /*One item onto the other*/
+  width: 100% /*Ocuppies 100% of the row*/
+}
+td:nth-of-type(1){ /*Takes the first item in td an apply changes*/
+  font-size: 1.5em; /*Apply changes to font */
+  font-weight: bold;
+  color: black;
+}
+th{
+  display:none; /* Remove the head of the table */
+}
+/* Designed for mobile */
+
+.actions{
+  position: absolute; /* Actions is inside content, so the top and right values are based on content (origin)*/
+  top: 1em; /* Channge 0px for 1em*/
+  right: 1em; /* Relative units so it changes with the size of content*/
+}
+
+.close{ /*Changes the link appearance inside the div actions*/
+  height: 40px; /* Size of the X*/
+  width: 40px;
+  color: white; /*Color of the x*/
+  border-radius: 50%; /* Round the element so it looks like a circle*/
+  background-color: #8360c3; /* Color behind the x*/
+  display: inline-block;
+  font-weight:300; /*Weight of the X */
+  cursor: pointer; /*Changes the pointer to a hand*/
+  display: flex; /* Flex box */
+  align-items: center; /* Align vertical*/
+  justify-content: center; /* Align horizontal */
+}
+
+.paragraph{
+  line-height: 1.8em; /*Space between lines*/
+  font-weight: 100; /*Weight of content in sierra nevada*/
+}
+
+.fa-star, .fa-star-o{
+  color:#ffc400; /*Color for stars*/
+}
+
+.table td, .table th{ /*th for table header, td for table body */
+  padding: 1em;
+  text-align: left;
+}
+
+.table{ /*This properties will be applied to class table in html*/
+  width: 100%; /*Ocuppies 100% of the content*/
+  border-spacing: 0;
+}
+
+.table tr:nth-child(even){ /*The child of tr elements which the row is an even number*/
+  background-color: #a6eced;
+}
+
+.title-item{
+  border-bottom: #8360c3 solid 2px; /*Solid border color purple height 2px*/
+  padding-bottom: 1em;
+}
+
+.position{ /*Holds the number in rank */
+  background-color: #8360c3;
+  color: white;
+  padding: 0.5em; /*1 value is applied for all sides*/
+  border-radius: 4px;
+  margin-right: 0.5em;
+}
+
+.address{
+  font-weight: bold;
+  color: #8360c3;
+  font-size: 1.2em;
+  margin-top: 1em;
+  display: inline-block;
+}
+
+.main-image{
+  float: left; /*Puts image on left and Text flows on the right of the image*/
+  margin-right: 1em; /*Margin for the image, separated from the text*/
+  height: 250px; /*Size of the image*/
+}
+
+@media(min-width:900px){
+  th{
+    display:table-cell;
+  }
+  td{
+    display: table-cell;
+    width: auto; /* Automatic for screens*/
+  }
+  td:nth-of-type(1){
+    font-size:1em;
+  }
+  .content{
+    padding: 1.8em; /* Relative units for elements that will get shorted by screen , for big screens 1.8em, short (<600px) 1em*/
+  }
+}
+
+/*Media querie for content, reduces the height to 500px if the screen has at least 550px of height*/
+@media (min-height: 550px){
+  .content{
+    height: 500px;
+  }
+}
