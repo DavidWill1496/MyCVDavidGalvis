@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"> <!--Adapt the device's width and initialize in scale 1:1-->
+    <title>Best burgers of the city</title>
+    <link rel="stylesheet" href="./assets/css/normalize.css"> <!-- Normalizer for different clients-->
+    <link rel="stylesheet" href="./font-awesome/css/all.min.css"> <!--Both code lines all.min.css y fontawesome.min.css -->
+    <link rel="stylesheet" href="./font-awesome/css/fontawesome.min.css"> <!--And this one too-->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/animate.css">
+    <link href="./assets/css/main.css" rel="stylesheet"> <!--It doesn´t need closing, the point is to search in the external folder-->
+  </head>
+  <body>
+    <div class="container"> <!-- Hold the whole site -->
+      <div class="content animated fadeInDown"> <!--Hold the content-->
+        <header>
+          <h1 class="title">Best burgers I have eaten</h1>
+        </header>
+        <table class="table"> <!--Everything from the table is in here-->
+          <thead>
+            <th>#</th>
+            <th>Name</th>
+            <th>Place</th>
+            <th>Score</th>
+            <th>Actions</th>
+          </thead>
+          <tbody>
+            <tr> <!-- Declare rows, every tr has the number of td declared in thead-->
+              <td>1</td>
+              <td>Sierra Nevada</td>
+              <td>Calle 99-11</td>
+              <td><i class="fa fa-star"><i class="fas fa-star"><i class="fas fa-star"><i class="fas fa-star"><i class="fas fa-star"></td>
+              <td>
+                <a href="./restaurants/sierra.html">See more...</a> <!--It takes us to the site sierra.html-->
+              </td>
+            </tr>
+            <tr> <!-- Declare rows, every tr has the number of td declared in thead-->
+              <td>2</td>
+              <td>Smoking Burgers</td>
+              <td>Calle 110-15</td>
+              <td><i class="fas fa-star"><i class="fas fa-star"><i class="fas fa-star"><i class="fas fa-star"><i class="fas fa-star"></td>
+              <td>
+                <a href="./restaurants/sierra.html">See more...</a> <!--It takes us to the site sierra.html-->
+              </td>
+            </tr>
+            <tr> <!-- Declare rows, every tr has the number of td declared in thead-->
+              <td>3</td>
+              <td>Burger Legends</td>
+              <td>Diag 86-104</td>
+              <td><i class="fas fa-star"><i class="fas fa-star"><i class="fas fa-star"><i class="fas fa-star"><i class="far fa-star"></td>
+              <td></td>
+            </tr>
+            <tr> <!-- Declare rows, every tr has the number of td declared in thead-->
+              <td>4</td>
+              <td>Cocheros burgers</td>
+              <td>Next corner</td>
+              <td><i class="fas fa-star"><i class="fas fa-star"><i class="fas fa-star"><i class="fas fa-star"><i class="far fa-star"></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="./javascript/main.js"></script>
+  </body>
+</html>
